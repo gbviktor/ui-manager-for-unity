@@ -1,0 +1,14 @@
+{
+    "name": "com.gbviktor.ui-manager-for-unity",
+    "displayName": "UI Manager for Unity",
+    "author": { "name": "Victor Bisterfeld", "url": "https://gbviktor.de/ui-manager-for-unity" },
+    "version": "1.0.0",
+    "unity": "2022.1",
+    "description": "UI Manager: help you to navigate between Screens, load Screen Prefabs, update list of available Screens in Editor etc.",
+    "keywords": [ "ui", "tool", "runtime", "screen","manager" ],
+    "license": "MIT",
+    "category": "Manager",
+    "dependencies": {
+        "com.unity.modules.uielements": "1.0.0"
+    }
+}
