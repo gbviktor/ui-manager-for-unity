@@ -1,7 +1,8 @@
 {
     "name": "com.gbviktor.ui-manager-for-unity",
+    "rootNamespace": "",
     "references": [
-        "UnityEngine.UIElementsModule"
+        "UnityEngine.UI"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
