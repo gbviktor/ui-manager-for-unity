@@ -10,7 +10,7 @@ The full documentation for the package can be not found :D
 
 ## Requirements
 
-This version of `com.package-template` is compatible with the following Unity versions and platforms:
+This package is compatible with the following Unity versions and platforms:
 
 * 2022.1.2 and later.
 * All platforms supported by Unity are supported
