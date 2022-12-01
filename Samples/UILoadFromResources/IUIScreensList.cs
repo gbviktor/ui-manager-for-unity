@@ -1,4 +1,4 @@
-﻿namespace com.gbviktor
+﻿namespace com.gbviktor.UIManager.Core
 {
     public interface IUIScreensList
     {

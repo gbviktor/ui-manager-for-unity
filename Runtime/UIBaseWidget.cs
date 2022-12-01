@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using com.gbviktor.UIManager.Core;
 
-namespace Core
+using UnityEngine;
+
+namespace com.gbviktor.UIManager
 {
     [RequireComponent(typeof(CanvasGroup))]
     public class UIBaseWidget : UIBaseElement, IUIOpenable

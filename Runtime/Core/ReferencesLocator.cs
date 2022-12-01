@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Core
+namespace com.gbviktor.UIManager.Core
 {
     public class ReferencesLocator<T>
     {

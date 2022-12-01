@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 
+using com.gbviktor.UIManager.Core;
+
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Core
+namespace com.gbviktor.UIManager
 {
     [RequireComponent(typeof(CanvasGroup))]
     [RequireComponent(typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster))]

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Core
+namespace com.gbviktor.UIManager
 {
     public class UIBaseElement : MonoBehaviour
     {

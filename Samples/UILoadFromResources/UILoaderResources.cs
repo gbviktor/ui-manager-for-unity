@@ -1,12 +1,12 @@
 using System;
 
-using Core;
+using com.gbviktor.UIManager.Core;
 
 using UnityEngine;
 
 using Object = UnityEngine.Object;
 
-namespace com.gbviktor
+namespace com.gbviktor.UIManager
 {
     public class UILoaderResources : IUILoader
     {

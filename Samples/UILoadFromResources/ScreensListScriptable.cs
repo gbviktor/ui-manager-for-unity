@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 
-using Core;
+using com.gbviktor.UIManager.Core;
 
 using UnityEngine;
 
 using Object = UnityEngine.Object;
 
-namespace com.gbviktor
+namespace com.gbviktor.UIManager
 {
     [CreateAssetMenu(menuName = "Montana Games/DB/Screens List", fileName = "ScreensList", order = 1)]
     public class ScreensListScriptable : ScriptableObject, IUIScreensList

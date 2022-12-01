@@ -1,4 +1,4 @@
-namespace Core
+namespace com.gbviktor.UIManager.Core
 {
     public interface IUILoader
     {
