@@ -10,5 +10,16 @@
     "category": "Manager",
     "dependencies": {
         "com.unity.modules.uielements": "1.0.0"
+    },
+    "samples": [
+    {
+      "displayName": "UILoadFromResources",
+      "description": "This sample give you a ScreensList as ScriptableObject, and UILoaderResources class to load Screen from Resources Folder",
+      "path": "Samples~/UILoadFromResources"
     }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbviktor/ui-manager-for-unity.git"
+  }
 }
