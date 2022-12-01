@@ -14,7 +14,7 @@ This package is in development.
 	- Montana Games/DB/Screens List
 		- this Scriptable Object looking for **Prefabs** inside this Folder (Root only) of type *UIScreen* and update list of available *Screens*
 		- just put your *Prefab* in this Folder to make it visible for *UI Manager*
-- after, you can create your first *Screen* inherited from **UIScreen** class
+- after, you can create your first *Screen* inherited from/extends **UIScreen** class
 	- see *UITestScreen* as a sample
 - before *UI Manager* can work, initialize it with followed code (do it once, this script use static fields)
 ```csharp  //pickup a ScriptableObject of type ScreensList 
