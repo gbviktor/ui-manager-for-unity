@@ -1,0 +1,25 @@
+{
+    "name": "com.gbviktor.ui-manager-for-unity",
+    "displayName": "UI Manager for Unity",
+    "author": { "name": "Victor Bisterfeld", "url": "https://gbviktor.de/ui-manager-for-unity" },
+    "version": "1.0.0",
+    "unity": "2022.1",
+    "description": "UI Manager: help you to navigate between Screens, load Screen Prefabs, update list of available Screens in Editor etc.",
+    "keywords": [ "ui", "tool", "runtime", "screen","manager" ],
+    "license": "MIT",
+    "category": "Manager",
+    "dependencies": {
+        "com.unity.modules.uielements": "1.0.0"
+    },
+    "samples": [
+    {
+      "displayName": "UILoadFromResources",
+      "description": "This sample give you a ScreensList as ScriptableObject, and UILoaderResources class to load Screen from Resources Folder",
+      "path": "Samples~/UILoadFromResources"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbviktor/ui-manager-for-unity.git"
+  }
+}
