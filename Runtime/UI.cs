@@ -52,8 +52,6 @@ namespace com.gbviktor.UIManager
             Object.Destroy(destroyScreen?.gameObject);
         }
 
-
-
         public static void CloseCurrentFocusPrevious()
         {
             insNestingController.CloseCurrentFocusPrevious();
@@ -64,10 +62,10 @@ namespace com.gbviktor.UIManager
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public static T OpenAndCloseAllPrevious<T>() where T : UIScreen
+        public static T OpenAndCloseAllPrevious<T>(params object[] param) where T : UIScreen
         {
             insNestingController.ForceCloseAll();
-            return ins.openNested<T>();
+            return ins.openNested<T>(param);
         }
 
 
