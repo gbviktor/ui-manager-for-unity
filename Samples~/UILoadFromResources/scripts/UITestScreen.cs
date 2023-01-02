@@ -1,13 +1,19 @@
 using com.gbviktor.UIManager;
 
+using TMPro;
+
+using UnityEngine;
+
 namespace com.gbviktor.samples
 {
     public class UITestScreen : UIScreen
     {
+        [SerializeField] TextMeshProUGUI demoText;
         //event called if UI.OpenScreen<UITestScreen>(somevariable)
         protected override void OnOpen(params object[] param)
         {
             base.OnOpen(param);
+            demoText.text = param[0].ToString();
         }
 
         //event called if previous screen will be closed, and this go in focus
