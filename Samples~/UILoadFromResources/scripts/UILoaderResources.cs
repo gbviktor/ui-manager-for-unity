@@ -19,15 +19,13 @@ namespace com.gbviktor.UIManager
         public S LoadScreen<S>() where S : UIScreen
         {
             var type = typeof(S);
-            var targetGameObjectName = contentList.GetGameObjectNameByScreenTypeName(type.Name);
+            var targetGameObjectName = contentList.GetGameObjectNameByScreenTypeNameFullName
 
             if (targetGameObjectName != null)
             {
-                GameObject goasset = Resources.Load<GameObject>($"{contentList.PathToResourcesFolder}/{targetGameObjectName}");
+                GameObject goasset = Resources.Load<GameObject>($"{contentList.PathToResourcesFolder}{targetGameObjectName}");
 
-                var asset = goasset.GetComponent<S>();
-
-                if (asset != null)
+                if (goasset.TryGetComponent<S>(out var asset))
                 {
                     var screen = Object.Instantiate<S>(asset);
                     screen.name = type.ToString();
