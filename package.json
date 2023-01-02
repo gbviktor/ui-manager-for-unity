@@ -1,6 +1,6 @@
 {
     "name": "com.gbviktor.ui-manager-for-unity",
-    "displayName": "UI Manager for Unity",
+    "displayName": "UI Manager",
     "author": { "name": "Victor Bisterfeld", "url": "https://gbviktor.de/ui-manager-for-unity" },
     "version": "1.0.0",
     "unity": "2022.1",
