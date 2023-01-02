@@ -1,0 +1,4 @@
+- Create new Scene
+- Add Component of Type *UIStarterDemo*
+- Drop a ScreensListScriptable Asset into Field *Screens List* in *UI Starter Demo* Component
+- Starte Scene... it's must be UITestScreen opened

@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f1bf8853fc2c5449519e3a3dd9673c, type: 3}
   m_Name: ScreensList
   m_EditorClassIdentifier: 
-  screensList: []
-  PathToAssets: 
+  screensList:
+  - typeName: com.gbviktor.samples.UITestScreen
+    gameObjectName: UITestScreen
+  PathToAssets: fdsfasdf

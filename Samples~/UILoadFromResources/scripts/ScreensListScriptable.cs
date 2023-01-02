@@ -19,7 +19,8 @@ namespace com.gbviktor.UIManager
 
         string IUIScreensList.GetGameObjectNameByScreenTypeName(string typeName)
         {
-            return screensList.Find(x => x.typeName.Equals(typeName, StringComparison.Ordinal)).gameObjectName;
+
+            return screensList.Find(x => x.typeName == typeName).gameObjectName;
         }
 
         [Serializable]
@@ -30,12 +31,11 @@ namespace com.gbviktor.UIManager
         }
 
         #region EDITOR ONLY
+
 #if UNITY_EDITOR
 
-        [NonSerialized]
-        public ScriptableObject Reference;
-        protected string assetPath;
-        public string PathToAssets;
+        protected string pathToFolderOfScriptable;
+        [SerializeField] string PathToAssets;
         public void OnEnable()
         {
             UpdateReference();
@@ -43,11 +43,33 @@ namespace com.gbviktor.UIManager
         }
         private void UpdateReference()
         {
-            Reference = this;
-            assetPath = UnityEditor.AssetDatabase.GetAssetPath(Reference);
-            PathToAssets = assetPath.Replace("/" + this.name + ".asset", "");
-            PathToResourcesFolder = PathToAssets.Replace("Assets/Resources/", "");
+            pathToFolderOfScriptable = UnityEditor.AssetDatabase.GetAssetPath(this).Replace($"/{this.name}.asset", "");
+            PathToAssets = GetRelativePathFromResourcesFolder(pathToFolderOfScriptable);
+            PathToResourcesFolder = PathToAssets;//PathToAssets.Replace("Assets/", "");
         }
+
+        private string GetRelativePathFromResourcesFolder(string pathToAssets)
+        {
+            //we need to get relative path from Resources folder to get success function to load from Resources
+            // see https://docs.unity3d.com/ScriptReference/Resources.Load.html
+            var folders = pathToAssets.Split('/');
+            int indexOfResourceFolder = -1;
+            string relativePath = string.Empty;
+
+            for (int i = 0; i < folders.Length; i++)
+            {
+                string folder = folders[i];
+                if (indexOfResourceFolder == -1)
+                {
+                    if (folder.Equals("Resources"))
+                    {
+                        indexOfResourceFolder = i;
+                    }
+                } else relativePath = $"{relativePath}{folder}/";
+            }
+            return relativePath;
+        }
+
         [RuntimeInitializeOnLoadMethod]
         private void OnValidate()
         {
@@ -72,7 +94,7 @@ namespace com.gbviktor.UIManager
         public string[] FindObjectsInFolderOfType()
         {
             var TypeToSearch = "Prefab";
-            var PathToAssets = PathToResourcesFolder;
+            var PathToAssets = pathToFolderOfScriptable;
 
             if (!UnityEditor.EditorUtility.IsPersistent(this) || string.IsNullOrEmpty(PathToAssets))
                 return Array.Empty<string>();
@@ -100,6 +122,7 @@ namespace com.gbviktor.UIManager
         }
 
 #endif
+
         #endregion
     }
 }
